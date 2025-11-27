@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nickonyi/Mini-message-board#readme",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^5.1.0"
   }
