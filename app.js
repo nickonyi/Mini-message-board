@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import indexRouter from "./routes/indexRouter.js";
 import { fileURLToPath } from "url";
 import path from "path";
 dotenv.config();

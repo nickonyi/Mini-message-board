@@ -1,3 +1,7 @@
+import { Router } from "express";
+
+const indexRouter = Router();
+
 const messages = [
   {
     text: "Hi there!",
@@ -10,3 +14,9 @@ const messages = [
     added: new Date(),
   },
 ];
+
+indexRouter.get("/", (req, res) => {
+  res.render("index", { title: "Mini message board", messages: messages });
+});
+
+export default indexRouter;
