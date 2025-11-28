@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Board</title>
+  </head>
+  <body>
+    <ul>
+      <!-- prettier-ignore -->
+      <ul>
+       <ul>
+  <% messages.forEach((message) => { %>
+    <%- include('message', { message: message }) %>
+  <% }) %>
+</ul>
+
+      </ul>
+    </ul>
+  </body>
+</html>
