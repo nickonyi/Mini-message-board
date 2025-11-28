@@ -5,15 +5,8 @@
   </head>
   <body>
     <ul>
-      <!-- prettier-ignore -->
-      <ul>
-       <ul>
-  <% messages.forEach((message) => { %>
-    <%- include('message', { message: message }) %>
-  <% }) %>
-</ul>
-
-      </ul>
+      <% messages.forEach((message) => { %> <%- include('message', { message:
+      message }) %> <% }) %>
     </ul>
   </body>
 </html>
