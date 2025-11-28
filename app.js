@@ -15,9 +15,9 @@ const __dirname = path.dirname(__filename);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.get("/", router);
-
 app.use(express.urlencoded({ extended: true }));
+
+app.use("/", router);
 
 app.listen(PORT, () => {
   console.log(`listening at port:${PORT}`);

@@ -13,50 +13,28 @@ const messages = [
     user: "Charles",
     added: new Date(),
   },
-  {
-    text: "How’s everyone doing today?",
-    user: "Lena",
-    added: new Date(),
-  },
-  {
-    text: "Just finished working on my project!",
-    user: "Sam",
-    added: new Date(),
-  },
-  {
-    text: "Anyone up for a quick chat?",
-    user: "Derrick",
-    added: new Date(),
-  },
-  {
-    text: "The weather is amazing today!",
-    user: "Nora",
-    added: new Date(),
-  },
-  {
-    text: "Learning Express is fun!",
-    user: "Tasha",
-    added: new Date(),
-  },
-  {
-    text: "Good morning everyone!",
-    user: "Brian",
-    added: new Date(),
-  },
-  {
-    text: "Coffee break time ☕",
-    user: "Elena",
-    added: new Date(),
-  },
-  {
-    text: "Just joined the chat!",
-    user: "Kyle",
-    added: new Date(),
-  },
 ];
 
 router.get("/", (req, res) => {
   res.render("index", { title: "Mini message board", messages: messages });
+});
+
+router.get("/new", (req, res) => {
+  res.render("form");
+});
+
+router.get("/message/:id", (req, res) => {
+  const id = req.params.id;
+  const message = messages[id];
+
+  res.render("messageDetails", { message });
+});
+
+router.post("/new", (req, res) => {
+  const { author, text } = req.body;
+  messages.push({ text, user: author, added: new Date() });
+
+  res.redirect("/");
 });
 
 export default router;
