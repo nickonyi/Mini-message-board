@@ -1,6 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
-import indexRouter from "./routes/indexRouter.js";
+import router from "./routes/router.js";
 import { fileURLToPath } from "url";
 import path from "path";
 dotenv.config();
@@ -15,7 +15,9 @@ const __dirname = path.dirname(__filename);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.get("/", indexRouter);
+app.get("/", router);
+
+app.use(express.urlencoded({ extended: true }));
 
 app.listen(PORT, () => {
   console.log(`listening at port:${PORT}`);

@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-const indexRouter = Router();
+const router = Router();
 
 const messages = [
   {
@@ -55,8 +55,8 @@ const messages = [
   },
 ];
 
-indexRouter.get("/", (req, res) => {
+router.get("/", (req, res) => {
   res.render("index", { title: "Mini message board", messages: messages });
 });
 
-export default indexRouter;
+export default router;
