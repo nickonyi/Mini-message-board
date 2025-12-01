@@ -28,6 +28,7 @@ export const createPosts = (req, res) => {
 
 export const getMessageDetails = (req, res) => {
   const id = req.params;
+  const message = messages[id];
 
-  res.render("messageDetails", { messages });
+  res.render("messageDetails", { message });
 };
