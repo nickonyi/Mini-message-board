@@ -13,6 +13,11 @@ const messages = [
     user: "Charles",
     added: new Date(),
   },
+  {
+    text: "Hello World!",
+    user: "John",
+    added: new Date(),
+  },
 ];
 
 router.get("/", (req, res) => {
