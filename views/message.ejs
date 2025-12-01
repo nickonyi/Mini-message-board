@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Board Message</title>
-  </head>
-  <body>
-    <% messages.forEach((message)=>{ %> <%- include('message',{message})%>
-    <%})%>
-  </body>
-</html>
+<li>
+  <strong>User:</strong><%= message.user%> <br />
+  <strong>Text:</strong><%= message.text%> <br />
+  <strong>Date:</strong><%= message.added.toLocaleString()%>
+</li>
