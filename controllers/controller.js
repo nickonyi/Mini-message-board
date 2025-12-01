@@ -14,3 +14,14 @@ export const messages = [
 export const getMessages = (req, res) => {
   res.render("index", { messages });
 };
+
+export const formData = (req, res) => {
+  res.render("form");
+};
+
+export const createPosts = (req, res) => {
+  const { author, text } = req.body;
+  messages.push({ user: author, text, added: new Date() });
+
+  res.redirect("/");
+};
