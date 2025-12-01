@@ -28,6 +28,6 @@ export const createPosts = (req, res) => {
 
 export const getMessageDetails = (req, res) => {
   const id = req.params;
-  console.log(id);
-  res.send("Tumekupata mpezai mtazamaji");
+
+  res.render("messageDetails", { messages });
 };

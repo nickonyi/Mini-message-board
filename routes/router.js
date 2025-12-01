@@ -8,6 +8,6 @@ const router = Router();
 router.get("/", getMessages);
 router.get("/new", formData);
 router.post("/new", createPosts);
-router.post("/message/:id", getMessageDetails);
+router.get("/message/:id", getMessageDetails);
 
 export default router;
