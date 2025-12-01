@@ -6,8 +6,8 @@
     <title>Mini Board Message</title>
   </head>
   <body>
-    <% messages.forEach((message)=>{ %> <%- include('message',{message})%>
-    <%})%>
+    <% messages.forEach((message,index)=>{ %> <%-
+    include('message',{message,index})%> <%})%>
     <a href="/new">Add users</a>
   </body>
 </html>

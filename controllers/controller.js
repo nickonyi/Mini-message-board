@@ -25,3 +25,9 @@ export const createPosts = (req, res) => {
 
   res.redirect("/");
 };
+
+export const getMessageDetails = (req, res) => {
+  const id = req.params;
+  console.log(id);
+  res.send("Tumekupata mpezai mtazamaji");
+};
