@@ -11,7 +11,7 @@ dotenv.config();
 const __fileName = fileURLToPath(import.meta.url);
 const __dirName = path.dirname(__fileName);
 
-app.set("views", path.join(__dirName, "views"));
+app.set("views", path.join(__dirName, "visews"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use("/", router);
